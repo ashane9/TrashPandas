@@ -6,6 +6,6 @@ Rails.application.routes.draw do
     get '/rtc/:number' => 'rtc#card_details', as: :card
     post '/menu' => 'mobile#menu', as: :post_mobile_card
     post '/rtc' => 'rtc#menu', as: :post_card
-    patch '/menu' => 'mobile#menu', as: :patch_mobile_card
-    patch '/rtc' => 'rtc#menu', as: :patch_card
+    patch '/mobile/:number' => 'mobile#update', as: :patch_mobile_card
+    patch '/rtc/:number' => 'rtc#update', as: :patch_card
 end

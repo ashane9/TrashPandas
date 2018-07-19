@@ -1,0 +1,140 @@
+/*
+ *= require rtc.css.scss
+ */
+
+.input-xs {
+    position: relative;
+    height: 100%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 0%;
+    font-size: 70%;
+    /*line-height: 1.5; !* If Placeholder of the input is moved up, rem/modify this. *!*/
+    border-radius: 0%;
+    border-color: #4d7fa9;
+    background-color: #4d7fa9;
+    color: #9ebad1;
+}
+
+.default-text{
+    font-size: .8vw;
+}
+
+#card-header{
+    padding-top: .5%;
+    padding-bottom: 0;
+    font-size: 1.2vw;
+}
+
+.full-width{
+  position: relative;
+  width: 98%;
+}
+
+.input-full{
+    padding-bottom: 1.5%;
+    position: relative;
+    width: 100%;
+    height: 200%;
+    resize: none;
+}
+
+.search {
+    /*padding-top: 0%;*/
+    font-size: 70%;
+    color: #9ebad1;
+}
+
+.rtc-body{
+    background-color: #F5F5F5;
+    text-align: center;
+}
+
+.form-control::-webkit-input-placeholder {
+    color: #9ebad1;
+    opacity: 1;
+    text-align: left;
+}
+
+.summary-label {
+    float: left;
+    padding-top: .2%;
+    padding-right: .5%;
+}
+
+.summary-text {
+  width: 94.5%;
+}
+
+.top-padding {
+    padding-top: .5%;
+}
+
+.no-padding {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.no-horizontal-padding{
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.container-max-width {
+    max-width: 1600px;
+}
+
+#card-fields{
+  width: 90%;
+}
+
+#quick-info {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: .5%;
+    padding-right: .5%;
+    width: 10%;
+}
+
+.shrink-col{
+    width: 2%;
+}
+
+.center-div {
+    max-width: 100%;
+    text-align: center;
+}
+
+.square-border{
+    border-radius: 0;
+}
+
+.no-top-border{
+    border-top: none;
+}
+
+.no-top-margin{
+    margin-top:0!important;
+}
+
+.no-bottom-margin{
+    margin-bottom: 0!important;
+}
+
+.rtc-panel {
+    padding: .5%;
+}
+
+.rtc-save-button{
+    color: white;
+    background-color: #8EB9DF;
+    border: 0;
+    border-radius: 8%;
+    /*padding-top: 1.5%;*/
+    /*padding-bottom: 1.5%;*/
+    /*padding-left: 6%;*/
+    /*padding-right: 6%;*/
+}
