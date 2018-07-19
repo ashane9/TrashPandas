@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RtcQrIntegration</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag "rtc" %>
+</head>
+
+<body class="rtc-body">
+<div class="full-width-div">
+  <div class="container-max-width">
+    <div class="row" style="background-color: #2e5589">
+      <div class="col-md-12">
+        <%= image_tag "dashboard_top.PNG", class: 'img-responsive' %>
+      </div>
+    </div>
+
+    <div class="row" style="background-color: #2e5589">
+      <div class="col-md-11 text-left">
+        <%= image_tag "dashboard_bottom.PNG", class: 'img-responsive' %>
+      </div>
+      <div class="col-md-1 no-padding right-inner-addon">
+        <div class="col-sm-11 no-horizontal-padding">
+          <%= form_with scope: @card, url: post_card_path do |form| %>
+            <%= form.text_field :number, class: 'form-control input-xs', placeholder: 'Search Work Items' %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <%= yield %>
+
+  </div>
+</div>
+
+</body>
+</html>
