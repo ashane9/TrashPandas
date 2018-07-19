@@ -1,0 +1,10 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.image-upload > input
+{
+  display: none;
+}
+.image-upload > label{
+  cursor:pointer;
+}
