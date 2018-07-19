@@ -1,0 +1,25 @@
+<div class="col-sm-12">
+  <div id='cardLookup' style="background-color: #2e5589">
+    <h1>Scan QR Code</h1>
+
+    <div class="image-upload">
+      <label for="file-input">
+        <%= image_tag "scan_logo.png", class: 'img-responsive' %>
+      </label>
+      <input type="file" id="file-input" style="visibility:hidden;" capture="camera" accept="image/*" name="cameraInput" onchange="scan_qr()">
+    </div>
+    <p id="demo"></p>
+    <h1>Enter RTC Number</h1>
+    <%= form_with scope: @card, url: post_mobile_card_path do |form| %>
+      <p>
+        Number
+        <%= form.text_field :number %><br>
+      </p>
+
+      <p>
+        <%= form.submit 'Submit' %>
+      </p>
+    <% end %>
+
+  </div>
+</div>
