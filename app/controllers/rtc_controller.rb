@@ -1,0 +1,2 @@
+class RtcController < ApplicationController
+end
