@@ -1,58 +1,117 @@
-<div>
-  <h1 class="jumbotron">RTC Card</h1>
+<div class="text-left" style="background-color: #2e5589">
+
+  <%= link_to 'menu' do %>
+  <%= image_tag "home.png" , width: '100px' , height: '100px' %>
+<% end %>
+
+
+<div class = "default-text" style="font-size: 2.5vw">
+  <div align="center" class="jumbotron" style="background-color: #2e5589">
+    <h1><span style="color: white">Card Number : <%= @card.number %></span></h1></div>
+
   <% flash.each do |key, value| %>
     <div class="alert alert-<%= key %>"><%= value %></div>
   <% end %>
 
   <%= form_with model: @card, url: patch_mobile_card_path do |form| %>
 
+    <div align="left" class='container'  style="background-color: #2e5589;">
+      <table>
+        <tr>
+          <td style="padding-left: 0"><span style="color: white">Points:</span><br><br></td>
+          <td></td>
+        </tr>
+         <tr>
+          <td><%= form.select :points, options_for_select([0,1,3,5,8,13,21,34,55,89,144],selected: @card.points)%><br><br><br></td>
+        </tr>
 
-    <div class="row">
-      <div class="col-sm-4">
-        Iteration: <%= form.select :iteration, options_for_select(['Scarlet 2018 I14 (7.12)',
-                                                                   'Scarlet 2018 I15 (7.25)',
-                                                                   'Scarlet 2018 I16 (8.9)'],selected: @card.iteration)%>
+        <tr>
+          <td><span style="color: white">Iteration :</span> <br><br></td>
+          <td></td>
+        </tr>
 
-      </div>
-      <div class="col-sm-4">Card Number: <%= form.label @card.number %></div>
-      <div class="col-sm-4">Points: <%= form.select :points, options_for_select([0,1,3,5,8,13,21,34,55,89,144],selected: @card.points)%></div>
+        <tr>
+          <td>
+            <%= form.select :iteration, options_for_select(['Scarlet 2018 I14 (7.12)',
+                                                            'Scarlet 2018 I15 (7.25)',
+                                                            'Scarlet 2018 I16 (8.9)'],selected: @card.iteration)%><br><br><br></td>
+        </tr>
+        <tr>
+          <td>
+            <span style="color: white">Summary :</span> </td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>
+            <%= form.text_field :summary, selected: @card.summary %><br><br><br>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span style="color: white">Status:</span><br><br>
+          </td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>
+            <%= form.select :status, options_for_select(['New','Begin Analysis','Start Working','Set Done'], selected: @card.status) %><br><br><br>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span style="color: white">Owner: </span><br><br>
+          </td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>
+            <%= form.select :owner, options_for_select(['Kadambari Kaluri',
+                                                        'Suganthini Balaji',
+                                                        'Andrew Shane',
+                                                        'Manoj Chaluvadi',
+                                                        'Liusong Yang'],selected: @card.owner)%><br><br><br>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span style="color: white">Description: </span><br><br>
+          </td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>
+            <%= form.text_area :description, size: "60", selected: @card.description%><br><br><br>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span style="color: white">Comment: </span><br><br>
+          </td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td>
+            <%= form.text_area :comment, size: "60", selected: @card.comment%><br><br><br>
+          </td>
+        </tr>
+        <tr>
+           <td>
+            <%= form.submit 'Save' %><br><br><br><br><br><br><br><br><br><br><br>
+          </td>
+        </tr>
+
+      </table>
     </div>
-    <br><br>
 
-    <div class="row">
-      <div class="col-sm-12">Summary: <%= form.text_field :summary, selected: @card.summary %></div>
-    </div>
-
-
-    <br><br>
-
-    <div class="row">
-      <div class="col-sm-6">Status: <%= form.select :status, options_for_select(['New','Begin Analysis','Start Working','Set Done'], selected: @card.status) %></div>
-      <div class="col-sm-6">Owner: <%= form.select :owner, options_for_select(['Kadambari Kaluri',
-                                                                               'Suganthini Balaji',
-                                                                               'Andrew Shane',
-                                                                               'Manoj Chaluvadi',
-                                                                               'Liusong Yang'],selected: @card.owner)%></div>
-
-      </div>
-     <br><br>
-     <div class="row">
-      <div class="col-sm-12">Description</div>
-       <br>
-       <div class="col-sm-12"><%= form.text_area :description, selected: @card.description%></div>
-    </div>
-    <br><br>
-    <div class="row">
-      <div class="col-sm-12">Comment</div>
-      <div class="col-sm-12"><%= form.text_area :comment, selected: @card.comment%></div>
-    </div>
-    <br><br>
-    <div class="row">
-      <div class="col-sm-12"><%= form.submit 'Save' %></div>
 
     </div>
-    <br><br>
 
   <% end %>
 
+  </div>
 </div>

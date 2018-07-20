@@ -86,7 +86,11 @@
               Owned By:
             </div>
             <div class="col-md-4">
-              <%= form.select :team_name, options_for_select(['Shane, Andrew'], selected: @card.owner), {}, class: 'full-width' %>
+              <%= form.select :team_name, options_for_select(['Kadambari Kaluri',
+                                                              'Suganthini Balaji',
+                                                              'Andrew Shane',
+                                                              'Manoj Chaluvadi',
+                                                              'Liusong Yang'], selected: @card.owner), {}, class: 'full-width' %>
             </div>
           </div>
           <div class="row text-left top-padding">
@@ -142,7 +146,9 @@
               Planned For:
             </div>
             <div class="col-md-4">
-              <%= form.select :iteration, options_for_select(['Not Today'], selected: @card.iteration), {}, class: 'full-width' %>
+              <%= form.select :iteration, options_for_select(['Scarlet 2018 I14 (7.12)',
+                                                              'Scarlet 2018 I15 (7.25)',
+                                                              'Scarlet 2018 I16 (8.9)'], selected: @card.iteration), {}, class: 'full-width' %>
             </div>
           </div>
           <div class="row text-left top-padding">
