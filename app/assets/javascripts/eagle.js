@@ -15,7 +15,7 @@ $(document).on('turbolinks:load', function() {
         height: 1062,
         image: eagleImage,
         numberOfFrames: 10,
-        ticksPerFrame: 2
+        ticksPerFrame: 1
     });
 });
 
