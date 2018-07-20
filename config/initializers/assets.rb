@@ -13,6 +13,7 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # folder are already added.
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
 
+Rails.application.config.assets.precompile += %w( mobile.scss )
 Rails.application.config.assets.precompile += %w( rtc.scss )
 Rails.application.config.assets.precompile += %w( grid.js )
 Rails.application.config.assets.precompile += %w( version.js )
