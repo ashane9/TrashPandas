@@ -1,58 +1,55 @@
-<!doctype html>
-<html>
-
-<head>
-  <meta charset="utf-8">
-  <%= stylesheet_link_tag "mobile" %>
-  <title>IterationDashboard</title>
-</head>
-
-<body style="background-color:yellow;">
-	<div align="center">
-		<h1>Current Iteration Details</h1><br>
-  <div class="container">
-	  <h3>
- <table class="table">  
-    <tbody>
-      <tr>
-        <td>Iteration</td>
-        <td>July 1 2018 - July 14 2018</td>
-      </tr>
-      <tr>
-        <td>Days Left</td>
-        <td>5</td>
-      </tr>
-      <tr>
-        <td>Total Points</td>
-        <td>70</td>
-      </tr>
-	        <tr>
-        <td>Points Left</td>
-        <td>20</td>
-      </tr>
-	        <tr>
-        <td>Holidays</td>
-        <td>N/A</td>
-      </tr>
-	     <tr>
-        <td>Capacity</td>
-        <td>18/20</td>
-      </tr>
-	  	     <tr>
-        <td>Release</td>
-        <td>N/A</td>
-      </tr>
-    </tbody>
-  </table>
-		  </h3>
+<div style="background-color:yellow;">
+  <div class="text-left">
+    <%= link_to 'menu' do %>
+      <%= image_tag "home.png", width: '100px', height: '100px' %>
+    <% end %>
+  </div>
+  <div align="center">
+    <h1>Current Iteration Details</h1><br>
+    <div class="container">
+      <h3>
+        <table class="table">
+          <tbody>
+          <tr>
+            <td>Iteration</td>
+            <td>July 1 2018 - July 14 2018</td>
+          </tr>
+          <tr>
+            <td>Days Left</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>Total Points</td>
+            <td>70</td>
+          </tr>
+          <tr>
+            <td>Points Left</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td>Holidays</td>
+            <td>N/A</td>
+          </tr>
+          <tr>
+            <td>Capacity</td>
+            <td>18/20</td>
+          </tr>
+          <tr>
+            <td>Release</td>
+            <td>N/A</td>
+          </tr>
+          </tbody>
+        </table>
+      </h3>
+    </div>
+    <br><br><br>
+    <h1><label>Comments in the iteration</label></h1><br><br>
+    <textarea rows="5" cols="70">Problems Encounterd in the itreation</textarea>
+    <br><br><br><br>
+    <h1><label>Burndown Chart</label></h1><br><br>
+    <%= image_tag "burndown.png", class: 'img-iteration-dashboard-burn' %>
+  </div>
+  <br><br><br><br><br><br><br><br><br>
+  <%= image_tag "Question.png" %>
+  <br><br><br><br>
 </div>
-		<br><br><br>
-		<h1><label>Comments in the iteration</label></h1><br><br>
-	<textarea rows="5" cols="70">Problems Encounterd in the itreation</textarea>
-		<br><br><br><br>
-		<h1><label>Burndown Chart</label></h1><br><br>
-    <%= image_tag "burndown.png", class: 'img-iteration-dashboard-burn'%>
-		</div><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <%= image_tag "Question.png"%>
-</body>
-</html>

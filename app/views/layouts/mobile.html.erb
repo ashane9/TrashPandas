@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <%= render "layouts/header" %>
   <title>TrashPandas</title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
@@ -10,7 +9,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </head>
 
-<body class="text-center" style="background-color: #2e5589">
-<%= yield %>
-</body>
+  <body class="text-center">
+    <%= yield %>
+  </body>
 </html>
