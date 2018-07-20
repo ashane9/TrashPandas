@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_19_200542) do
+ActiveRecord::Schema.define(version: 2018_07_20_021343) do
 
   create_table "cards", primary_key: "number", force: :cascade do |t|
     t.string "summary"
@@ -22,6 +22,8 @@ ActiveRecord::Schema.define(version: 2018_07_19_200542) do
     t.string "iteration"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "description"
+    t.string "comment"
   end
 
 end
