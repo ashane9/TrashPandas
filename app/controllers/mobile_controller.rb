@@ -28,6 +28,6 @@ class MobileController < ApplicationController
 
   private
   def card_params
-    params.require(:card).permit(:summary, :card_type, :status, :points, :owner, :blocked, :iteration)
+    params.require(:card).permit(:description, :comment, :summary, :card_type, :status, :points, :owner, :blocked, :iteration)
   end
 end
