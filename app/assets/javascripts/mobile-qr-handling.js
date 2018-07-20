@@ -27,7 +27,7 @@ function read(a)
 function redirect()
 {
     $.ajax({
-        url : "/menu",
+        url : "/",
         type : "post",
         data : { number: cardNumber }
     });
@@ -45,7 +45,7 @@ function scan_qr()
     show(flying);
     animationStop=false;
     run();
-    setTimeout(function(){animationStop=true;hide(flying);redirect();},6300);
+    setTimeout(function(){redirect();animationStop=true;hide(flying);},6300);
 }
 
 function show(element)
