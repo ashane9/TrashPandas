@@ -5,16 +5,54 @@
   <% end %>
 
   <%= form_with model: @card, url: patch_mobile_card_path do |form| %>
-    <p>
-      Number: <%= form.label @card.number %><br><br>
-      Status: <%= form.select :status, options_for_select(['New','Begin Analysis','Start Working','Set Done'], selected: @card.status) %><br><br>
-      Points: <%= form.select :points, options_for_select([0,1,3,5,8,13,21,34,55,89,144],selected: @card.points)%><br><br>
 
-    </p>
 
-    <p>
-      <%= form.submit 'Save' %>
-    </p>
+    <div class="row">
+      <div class="col-sm-4">
+        Iteration: <%= form.select :iteration, options_for_select(['Scarlet 2018 I14 (7.12)',
+                                                                   'Scarlet 2018 I15 (7.25)',
+                                                                   'Scarlet 2018 I16 (8.9)'],selected: @card.iteration)%>
+
+      </div>
+      <div class="col-sm-4">Card Number: <%= form.label @card.number %></div>
+      <div class="col-sm-4">Points: <%= form.select :points, options_for_select([0,1,3,5,8,13,21,34,55,89,144],selected: @card.points)%></div>
+    </div>
+    <br><br>
+
+    <div class="row">
+      <div class="col-sm-12">Summary: <%= form.text_field :summary, selected: @card.summary %></div>
+    </div>
+
+
+    <br><br>
+
+    <div class="row">
+      <div class="col-sm-6">Status: <%= form.select :status, options_for_select(['New','Begin Analysis','Start Working','Set Done'], selected: @card.status) %></div>
+      <div class="col-sm-6">Owner: <%= form.select :owner, options_for_select(['Kadambari Kaluri',
+                                                                               'Suganthini Balaji',
+                                                                               'Andrew Shane',
+                                                                               'Manoj Chaluvadi',
+                                                                               'Liusong Yang'],selected: @card.owner)%></div>
+
+      </div>
+     <br><br>
+     <div class="row">
+      <div class="col-sm-12">Description</div>
+       <br>
+       <div class="col-sm-12"><%= form.text_area :description, selected: @card.description%></div>
+    </div>
+    <br><br>
+    <div class="row">
+      <div class="col-sm-12">Comment</div>
+      <div class="col-sm-12"><%= form.text_area :comment, selected: @card.comment%></div>
+    </div>
+    <br><br>
+    <div class="row">
+      <div class="col-sm-12"><%= form.submit 'Save' %></div>
+
+    </div>
+    <br><br>
+
   <% end %>
 
 </div>
