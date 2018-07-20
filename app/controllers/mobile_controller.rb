@@ -18,8 +18,9 @@ class MobileController < ApplicationController
     prev_status = @card.status
     if @card.update_attributes(card_params)
       flash[:success] = 'Changes were successfully saved.'
+      @card = Card.find(rtc_number)
+      CardDoneMailer.done(@card).deliver if @card.status == 'Set Done' and prev_status != 'Set Done'
       redirect_to mobile_card_path(rtc_number)
-      # CardDoneMailer.card_done(@card.number).deliver if @card.status == 'Set Done' and prev_status != 'Set Done'
     else
       render 'card_details'
     end
