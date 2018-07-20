@@ -2,19 +2,18 @@
 <div id="outerdiv" class="full-mobile-view" style="height: 100vh; background-color: #2e5589;">
   <div id='cardLookup' class="full-mobile-view">
 
-    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br>
     <div class="image-upload" class="full-mobile-view">
       <label for="file-input" class="" style="display: block; text-align: center;">
         <%= image_tag "scan_logo.png", class: 'img-responsive', style: 'width: 100%;' %>
       </label>
       <input type="file" id="file-input" style="visibility:hidden;" capture="camera" accept="image/*" name="cameraInput" onchange="scan_qr()">
     </div>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br>
       <h1 style="width:100%; text-align:center; border-bottom: 1px solid #000; line-height:0.1em; margin:10px 0 20px; border-color: white; border-width: thick">
       <br>
       <span style="background:#2e5589; padding:1%; font-size: 10vw; color: white; font-style: italic">OR</span>
       </h1>
-      <!--<h1 style="font-size: 10vw; color: white;">&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; OR &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</h1>-->
 
       <br><br><br><br><br><br><br>
       <h1 style="font-size: 10vw; color: white;">Enter RTC Number</h1>
@@ -24,6 +23,7 @@
         <br><br><br><br><br>
           <%= form.submit 'Submit', style: "font-size: 8vw; border-radius: 8%;" %>
      <% end %>
+    <br><br>
 
     </div>
     <canvas id="eagleAnimation" style="display: none"></canvas>
