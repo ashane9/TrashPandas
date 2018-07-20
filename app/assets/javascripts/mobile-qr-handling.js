@@ -55,6 +55,7 @@ function show(element)
 }
 function hide(element)
 {
+    document.getElementById('outerdiv').style.backgroundColor = 'white';
     element.style.display = "none";
 
 }

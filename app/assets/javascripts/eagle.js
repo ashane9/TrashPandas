@@ -15,7 +15,7 @@ $(document).on('turbolinks:load', function() {
         height: 1062,
         image: eagleImage,
         numberOfFrames: 10,
-        ticksPerFrame: 4
+        ticksPerFrame: 2
     });
 });
 
@@ -40,7 +40,7 @@ function sprite (options) {
     that.image = options.image;
     that.loop = options.loop;
 
-    var eagleWidth = that.width/numberOfFrames/3,
+    var eagleWidth = (that.width/numberOfFrames)*1.5,
         flying = -eagleWidth;
 
     that.update = function () {
@@ -81,7 +81,7 @@ function sprite (options) {
             flying,
             0,
             eagleWidth,
-            that.height/3);
+            (that.height)*1.5);
     };
 
 
