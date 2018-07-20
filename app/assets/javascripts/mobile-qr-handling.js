@@ -16,7 +16,6 @@
 //= require findpat
 //= require alignpat
 //= require databr
-//= require mobile-qr-handling
 //= require eagle
 
 var cardNumber;
