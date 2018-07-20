@@ -45,7 +45,6 @@ function scan_qr()
     show(flying);
     animationStop=false;
     run();
-    // setTimeout(function(){animationStop=true;},1800);
     setTimeout(function(){animationStop=true;hide(flying);redirect();},6300);
 }
 
