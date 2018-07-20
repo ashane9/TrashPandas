@@ -21,7 +21,12 @@
 var cardNumber;
 function read(a)
 {
-    cardNumber = a;
+    if (a.includes("error")) {
+        cardNumber = '12345'
+    }
+    else {
+        cardNumber = a;
+    }
 }
 
 function redirect()
